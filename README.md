@@ -9,13 +9,14 @@ eg: username and password
 1)Obtain the Token
 
 Post to http://xyz/CreateBearerToken (works also on https)
-
 the following class:
 
 {
 	"username": "user",
 	"password": "pwd"
 }
+
+and you'll get the Token.
 
 Set Content Type: Content-Type: application/json
 
