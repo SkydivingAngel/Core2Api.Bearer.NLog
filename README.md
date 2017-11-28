@@ -25,3 +25,11 @@ eg: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJHYXNwY
 
 Instead of using hard coded credential in appsettings.json
 Entity Framework Core could be used.
+
+NLog saves to txt and csv files, you can also add Database support.
+take a look at the nlog.config file.
+In Program.cs I added a filter for core events:
+.ConfigureLogging(logging =>
+                    logging
+                        .AddFilter("System", LogLevel.Warning)
+                        .AddFilter("Microsoft", LogLevel.Warning))
