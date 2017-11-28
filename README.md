@@ -34,3 +34,11 @@ In Program.cs I added a filter for core events:
                     logging
                         .AddFilter("System", LogLevel.Warning)
                         .AddFilter("Microsoft", LogLevel.Warning))
+
+						
+In order to have ALWAYS the Webservice responsive on IIS:
+Create a new Pool (eg: core 2)
+Set the Idle Time to 1440 (minutes)
+Set Ricycle at 1 AM or whatever you want
+
+
