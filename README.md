@@ -21,24 +21,24 @@ and you'll get the Token.
 Set Content Type: Content-Type: application/json
 
 2)Use the Token setting the Authorization Header with the Bearer Token
-eg: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJHYXNwYXJpIiwianRpIjoiODhlZmYyZDQtNGFhZC00MjE4LTk5MDItMGUxNGM0YzgzNmRmIiwiR2FzcGFyaUlkIjoiMTAwMCIsIm5iZiI6MTUxMTg2NzUyMywiZXhwIjoxNTExODY5MzIzLCJpc3MiOiJHYXNwYXJpIiwiYXVkIjoiR2FzcGFyaSJ9.WzP8dJK2lUuWKgUCUpWdqzxxVpiG-PRbLAooAJKZh14
+<br>eg: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJHYXNwYXJpIiwianRpIjoiODhlZmYyZDQtNGFhZC00MjE4LTk5MDItMGUxNGM0YzgzNmRmIiwiR2FzcGFyaUlkIjoiMTAwMCIsIm5iZiI6MTUxMTg2NzUyMywiZXhwIjoxNTExODY5MzIzLCJpc3MiOiJHYXNwYXJpIiwiYXVkIjoiR2FzcGFyaSJ9.WzP8dJK2lUuWKgUCUpWdqzxxVpiG-PRbLAooAJKZh14
 
 
 Instead of using hard coded credential in appsettings.json
 Entity Framework Core could be used.
 
 NLog saves to txt and csv files, you can also add Database support.
-take a look at the nlog.config file.
-In Program.cs I added a filter for core events:
-.ConfigureLogging(logging =>
-                    logging
-                        .AddFilter("System", LogLevel.Warning)
-                        .AddFilter("Microsoft", LogLevel.Warning))
+<br>Take a look at the nlog.config file.
+<br>In Program.cs I added a filter for core events:
+    .ConfigureLogging(logging =>
+	    logging
+		.AddFilter("System", LogLevel.Warning)
+		.AddFilter("Microsoft", LogLevel.Warning))
 
 						
 In order to have ALWAYS the Webservice responsive on IIS:
 Create a new Pool (eg: core 2)
-Set the Idle Time to 1440 (minutes)
-Set Ricycle at 1 AM or whatever you want
+<br>Set the Idle Time to 1440 (minutes)
+<br>Set Ricycle at 1 AM or whatever you want
 
 
