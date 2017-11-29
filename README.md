@@ -29,11 +29,11 @@ Entity Framework Core could be used.
 
 NLog saves to txt and csv files, you can also add Database support.
 <br>Take a look at the nlog.config file.
-<br>In Program.cs I added a filter for core events:
-    .ConfigureLogging(logging =>
-	    logging
-		.AddFilter("System", LogLevel.Warning)
-		.AddFilter("Microsoft", LogLevel.Warning))
+<br>In Program.cs I added a filter for core events:<br>
+	    .ConfigureLogging(logging =>
+		    logging
+			.AddFilter("System", LogLevel.Warning)
+			.AddFilter("Microsoft", LogLevel.Warning))
 
 						
 In order to have ALWAYS the Webservice responsive on IIS:
