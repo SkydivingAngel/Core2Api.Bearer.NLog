@@ -3,7 +3,7 @@
     using System.Linq;
     using System.Reflection;
 
-    public class BearerTokenLoginModel
+    public class BearerTokenLoginModel : IEquatable<BearerTokenLoginModel>
     {
         public string Username { get; set; }
         public string Password { get; set; }
