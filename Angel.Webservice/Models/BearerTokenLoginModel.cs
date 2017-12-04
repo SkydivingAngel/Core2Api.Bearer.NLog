@@ -21,9 +21,7 @@
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
 
-            if (!(other is BearerTokenLoginModel)) return false;
-
-            return Equals((BearerTokenLoginModel)other);
+            return other is BearerTokenLoginModel t && Equals(t);
         }
 
         public bool Equals(BearerTokenLoginModel other)
